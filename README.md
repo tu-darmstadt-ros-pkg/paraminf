@@ -43,12 +43,13 @@ category2:
 When building the package you can use the flag '-DBUILD_DOC=TRUE' to build the documentation. You can access it in the doc folder afterwards.
 
 ## Installation
-While the package is set up to be build using [catkin](http://wiki.ros.org/catkin), it has no ROS dependencies.
+While the package is set up to be build using [ament](https://design.ros2.org/articles/ament.html), it has no ROS dependencies.
 The [yaml-cpp](https://github.com/jbeder/yaml-cpp) package is required for using this package. It can be installed using:
 ```
 sudo apt install libyaml-cpp-dev
 ```
-After cloning the package into your catkin workspace use `catkin build`.
+After cloning the package into your catkin workspace use `colcon build`.
+This package has been developed originally using catkin as build system. You can find this version on the "catkin_version" branch.
 
 ## Future Development & Contribution
 The project during which the package was developed has been discontinued.
