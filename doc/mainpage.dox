@@ -1,0 +1,60 @@
+/** \mainpage Usage
+
+	\tableofcontents
+
+	\section intro_sec Introduction
+
+	This is an parameter interface that can be used to manage, store and load parameter sets.
+
+	\section Example Code
+	 
+	This example code would work with the file example in the next section. For more details see paraminf::ParameterInterface and paraminf::YamlIOHandler.
+
+	\code{.cpp}
+
+  /* initialization and read in */
+  ParameterInterface param_inf;
+  YamlIOHandler::readAndAddParametersFromFile("input/file/path/input.yaml", param_inf);
+
+  /* read single value parameter */
+
+  /* option 1 */
+  int int_value;
+  bool was_found = param_inf.getParam("category1/int_parameters/int_parameter_name", int_value);
+
+  /* option 2 */
+  int other_int_value=param_inf.getParam<int>("category1/int_parameters/int_parameter_name");
+
+  /* read vector parameter */
+
+  std::vector<double> double_vec=param_inf.getParam<std::vector<double>>("category2/vectors/double_vectors/vec1");
+
+  /* storing parameters */
+  YamlIOHandler::writeParametersToFile("output/file/path/output.yaml", param_inf);
+	\endcode
+
+	\subsection sec2 Example File
+
+	\code{.yaml}
+	category1:
+		int_parameters:
+			int_parameter_name: 42
+	category2:
+		vectors:
+			double_vectors:
+				vec1: [-0.12, 0.4, 123456789.1234568]
+		
+	\endcode
+
+	For further examples for YAML files and how to use the parameter interface have a look in the test directory. 
+*/
+
+/**
+ * @namespace paraminf 
+ * @brief namespace of the paraminf package
+ */
+
+/**
+ * @namespace paraminf::test 
+ * @brief namespace of the unit tests for the paraminf package
+ */

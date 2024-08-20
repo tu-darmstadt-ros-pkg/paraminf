@@ -1,0 +1,23 @@
+0therC4tegory:
+    subcategory:
+        parameter_is_there: true
+        subsubcategory:
+            parameter223_int_vector: [-7, 0, 2, -5, 45]
+            string_parameter: Also there
+category:
+    category2:
+        paremeter124_bool: true
+    dir1:
+        dir2:
+            param_in_dir: true
+    parameter111_double: -0.123456789
+    parameter112_double: -1.0
+    parameter123_int: -7
+    parameter211_string_vector: [A, B, C, D, e, f, g, h, 123x]
+    parameter222_double_vector: [-0.12, 0.4, 123456789.1234568, 4.0]
+    paremeter124_bool: true
+    paremeter125_bool: false
+    paremeter224_bool_vector: [true, false, false, true]
+    paremeter225_bool: [false, false, false, false, true, true, false, true]
+    xyz:
+        parameter112_string: test_string
